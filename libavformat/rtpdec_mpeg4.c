@@ -218,7 +218,7 @@ static int aac_parse_packet(AVFormatContext *ctx, PayloadContext *data,
                 len -= header_size;
             }
             if ((ret = av_new_packet(pkt, len)) < 0) {
-                av_log(ctx, AV_LOG_ERROR, "Out of memory\n");Add commentMore actions
+                av_log(ctx, AV_LOG_ERROR, "Out of memory\n");
                 return ret;
             }
             memcpy(pkt->data, buf, len);
